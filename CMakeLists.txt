@@ -167,13 +167,13 @@ if(NOT DEFINED AMDGPU_TARGETS)
       gfx1102
   )
   set(AMDGPU_TARGETS_INIT
-    gfx803
-    gfx900
+#    gfx803
+#    gfx900
     gfx906:xnack-
-    gfx908:xnack-
-    gfx1010
-    gfx1030
-    ${OPTIONAL_AMDGPU_TARGETS}
+#    gfx908:xnack-
+#    gfx1010
+#    gfx1030
+#    ${OPTIONAL_AMDGPU_TARGETS}
   )
 endif()
 
