@@ -120,7 +120,7 @@ option(BUILD_SHARED_LIBS "Build rocSOLVER as a shared library" ON)
 include(util)
 include(CMakeDependentOption)
 
-option(BUILD_TESTING "Build rocSOLVER tests" OFF)
+option(BUILD_TESTING "Build rocSOLVER tests" ON)#LL:: raw: OFF
 if(BUILD_TESTING)
   enable_testing()
 endif()
@@ -129,8 +129,8 @@ option(BUILD_LIBRARY "Build rocSOLVER library" ON)
 option_opposite(BUILD_LIBRARY SKIP_LIBRARY)
 option(BUILD_WITH_SPARSE "Build rocSOLVER sparse re-factorization and solvers" ON)
 option(BUILD_CLIENTS_TESTS "Build rocSOLVER test client" "${BUILD_TESTING}")
-option(BUILD_CLIENTS_BENCHMARKS "Build rocSOLVER benchmark client" OFF)
-option(BUILD_CLIENTS_SAMPLES "Build rocSOLVER samples" OFF)
+option(BUILD_CLIENTS_BENCHMARKS "Build rocSOLVER benchmark client" ON)#LL:: raw:OFF
+option(BUILD_CLIENTS_SAMPLES "Build rocSOLVER samples" ON)#LL:: raw:OFF
 cmake_dependent_option(BUILD_CLIENTS_EXTRA_TESTS "Build extra tests" OFF BUILD_TESTING OFF)
 option(BUILD_ADDRESS_SANITIZER "Build with address sanitizer enabled" OFF)
 option(BUILD_CODE_COVERAGE "Build rocSOLVER with code coverage enabled" OFF)
@@ -157,14 +157,14 @@ if(NOT DEFINED AMDGPU_TARGETS)
   # Query for compiler support of GPU archs
   rocm_check_target_ids(OPTIONAL_AMDGPU_TARGETS
     TARGETS
-      gfx90a:xnack-
-      gfx90a:xnack+
-      gfx940
-      gfx941
-      gfx942
-      gfx1100
-      gfx1101
-      gfx1102
+#      gfx90a:xnack-
+#      gfx90a:xnack+
+#      gfx940
+#      gfx941
+#      gfx942
+#      gfx1100
+#      gfx1101
+#      gfx1102
   )
   set(AMDGPU_TARGETS_INIT
 #    gfx803
