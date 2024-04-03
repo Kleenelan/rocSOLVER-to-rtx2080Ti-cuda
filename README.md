@@ -1,3 +1,10 @@
+# rocSOLVER-to_rtx2080Ti-cuda
+
+only change hip to cuda, and rocblas to cublas, but keep all others of
+rocsover, function names, header file and so on
+## Keep names and header files.
+
+
 # rocSOLVER
 
 rocSOLVER is a work-in-progress implementation of a subset of [LAPACK][1]
